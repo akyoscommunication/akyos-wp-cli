@@ -1,5 +1,5 @@
 ### Installation
 
 ```
-/bin/bash -c "$(curl -fsSL https://gitlab.com/akyos-autres/sage-dev/-/raw/main/bin/installer.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/akyoscommunication/akyos-wp-cli/main/bin/installer.sh)"
 ```

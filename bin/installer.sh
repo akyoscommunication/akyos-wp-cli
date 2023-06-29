@@ -21,7 +21,7 @@ else
 fi
 
 # Clone the repository
-git clone https://github.com/akyoscommunication/akyos-wp-cli.git "$TMPDIR/aky_cli" --branch="docker"
+git clone https://github.com/akyoscommunication/akyos-wp-cli.git "$TMPDIR/aky_cli"
 
 # Move to the directory
 cd "$TMPDIR/aky_cli" || exit

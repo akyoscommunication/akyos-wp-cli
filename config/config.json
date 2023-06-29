@@ -1,0 +1,17 @@
+{
+  "APP_ENV": "developpment",
+  "GITLAB_TOKEN": "r8xzcM-x5zM_sUzucztS",
+  "WPMU_DEV_API_KEY": "d8fc51b3faa5985ebff402e6585c35593a055848",
+  "ACF_PRO_KEY": "b3JkZXJfaWQ9MTQwNjI0fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxOC0wOS0yNCAxNTowNzoyOQ==",
+  "COMPONENT_API_URL": "http://showroom.ac-dev.fr",
+  "PRESETS": {
+    "DB_USER": "root",
+    "DB_PASSWORD": "",
+    "DB_HOST": "host.docker.internal",
+    "ADMIN_EMAIL": "admin@akyos.com",
+    "SITE_URL": "http://localhost:3000"
+  },
+  "PLUGINS": {
+    "polylang": "%resources%/plugins/polylang.zip"
+  }
+}

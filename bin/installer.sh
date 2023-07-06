@@ -30,7 +30,7 @@ if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
     echo "docker run --rm --network=\"host\" -it -v \"%cd%\":/cwd aky-cli \"%*\"" > "C:\Program Files\aky\aky.bat"
     setx PATH "%PATH%;C:\Program Files\aky\\" /M
 else
-    echo "docker run --rm --network=\"host\" -it -v $(pwd):/cwd aky-cli \"\$@\"" > /usr/local/bin/aky
+    echo "docker run --rm --network=\"host\" -it -v $(pwd):/cwd -v $HOME/.aky/config.json:/root/.aky/config.json aky-cli \"\$@\"" > /usr/local/bin/aky
     chmod +x /usr/local/bin/aky
 fi
 

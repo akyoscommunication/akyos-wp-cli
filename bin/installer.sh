@@ -4,11 +4,11 @@ cwd=$(pwd)
 
 echo "Installation du CLI Akyos..."
 
-# Call bin/pre-install.sh
-"$TMPDIR/aky_cli/bin/pre-install.sh"
-
 # Clone the repository
 git clone https://github.com/akyoscommunication/akyos-wp-cli.git "$TMPDIR/aky_cli"
+
+# Call bin/pre-install.sh
+"$TMPDIR/aky_cli/bin/pre-install.sh"
 
 # Move to the directory
 cd "$TMPDIR/aky_cli" || exit

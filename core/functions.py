@@ -1,30 +1,3 @@
-import os
-from modules.colors import color as c
-from modules.file import File
-
-THEME_NAME = 'akyos-sage'
-API_URL = '/wp-json/akyos/v1'
-VERSION = File(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '.version')).content().strip()
-GITLAB_PROJECT_ID = '33423312'
-
-WORDPRESS = 'DEFAULT'
-BEDROCK = 'BEDROCK'
-SAGE = 'BEDROCK_SAGE'
-UNDEFINED = 'UNDEFINED'
-
-DEVELOPMENT_ENV = 'dev'
-PRODUCTION_ENV = 'production'
-
-WP_CLI = 'php wp-cli.phar'
-WP_CLI_QUIET = 'php -d display_errors=0 wp-cli.phar'
-
-PROJECT_PATH = os.path.abspath(os.getcwd())
-SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
-CONFIG_PATH = os.path.join(os.path.expanduser("~"), ".aky", "config.json")
-THEME_PATH = os.path.join(PROJECT_PATH, 'web', 'app', 'themes', THEME_NAME)
-COMPONENTS_PATH = os.path.join(THEME_PATH, 'resources', 'views', 'components')
-ASSETS_PATH = os.path.join(THEME_PATH, 'resources', 'assets')
-
 def assets(args):
     asset_path = os.path.join(SCRIPT_PATH, 'assets')
     for path in args:
@@ -70,6 +43,3 @@ def ex():
     print('')
     sysout('&9Goodbye')
     exit()
-
-
-HANDLER = None

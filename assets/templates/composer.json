@@ -56,7 +56,6 @@
         "roots/wordpress": "6.0.1",
         "roots/wp-config": "1.0.0",
         "roots/wp-password-bcrypt": "1.1.0",
-        "wpackagist-theme/twentytwentytwo": "^1.2",
         "advanced-custom-fields/advanced-custom-fields-pro": "^5.12",
         "wpmudev/wp-defender": "^3.2",
         "wpmudev/wp-smush-pro": "^3.11",

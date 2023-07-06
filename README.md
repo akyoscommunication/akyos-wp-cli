@@ -22,3 +22,13 @@ Créer un fichier .bat et y ajouter cette commande :
 wsl -d Ubuntu-20.04 -- aky $*
 ```
 Ensuite, ajouter le chemin du fichier .bat dans les [variables d'environnement](https://www.malekal.com/variables-environnement-windows/) de Windows (PATH)
+
+## Documentation
+
+Créer une nouvelle commande :
+```
+Ajouter une entrée dans config/commands.yaml
+Ajouter une classe dans app/commands/{package}/{command}Command.py
+La classe doit extend de BaseCommand (core.commands.BaseCommand)
+La classe doit implementer la méthode invoke(self, app, io)
+```

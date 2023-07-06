@@ -9,14 +9,6 @@ class Updater:
     @staticmethod
     def check(no_logs=False):
 
-        # headers = {
-        #     'PRIVATE-TOKEN': Config.get('GITLAB_TOKEN')
-        # }
-        # encoded_file = urllib.parse.quote('_global.py')
-        # url = F"https://gitlab.com/api/v4/projects/{GITLAB_PROJECT_ID}/repository/files/{encoded_file}/raw"
-        # response = requests.get(url, headers=headers)
-
-        print("Version : " + VERSION)
         response = requests.get("https://raw.githubusercontent.com/akyoscommunication/akyos-wp-cli/main/.version")
 
         try:

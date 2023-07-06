@@ -1,0 +1,7 @@
+commands:
+
+  - command: "project:create"
+    description: "Create a new WP project"
+    usage: "project:create <project-name>"
+    package: "app.commands.project"
+    class: "CreateCommand"

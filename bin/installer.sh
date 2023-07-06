@@ -27,7 +27,7 @@ fi
 
 # Store the configuration
 mkdir -p "$HOME/.aky"
-cp config/config.json "$HOME/.aky/config.json"
+cp .docker/config/config.json "$HOME/.aky/config.json"
 
 # Call bin/configuration.sh
 "$TMPDIR/aky_cli/bin/configuration.sh"

@@ -4,7 +4,7 @@ echo "Configuration du CLI"
 
 # Gitlab Token
 echo "[*] Veuillez entrer votre token Gitlab :";
-echo "https://gitlab.com/profile/personal_access_tokens";
+echo "(https://gitlab.com/profile/personal_access_tokens)";
 read -r token;
 sed -i "s/\"GITLAB_TOKEN\": \"\"/\"GITLAB_TOKEN\": \"$token\"/g" "$HOME/.aky/config.json"
 echo "[*] Token Gitlab enregistré !"

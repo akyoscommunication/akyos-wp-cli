@@ -14,6 +14,10 @@ git clone https://github.com/akyoscommunication/akyos-wp-cli.git "$TMPDIR/aky_cl
 
 # Call bin/pre-install.sh
 "$TMPDIR/aky_cli/bin/pre-install.sh"
+# Check the exit status of pre-install.sh
+if [ $? -ne 0 ]; then
+    exit 1
+fi
 
 # Move to the directory
 cd "$TMPDIR/aky_cli" || exit

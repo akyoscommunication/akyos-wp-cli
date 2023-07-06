@@ -4,21 +4,8 @@ cwd=$(pwd)
 
 echo "Installation du CLI Akyos..."
 
-# Check if Docker is installed
-if command -v docker >/dev/null 2>&1; then
-    :
-else
-    echo "Docker n'est pas installé, veuillez l'installer avant de continuer."
-    exit 1
-fi
-
-# Check if Docker is running
-if docker info >/dev/null 2>&1; then
-    :
-else
-    echo "Docker n'est pas en cours d'exécution, veuillez le démarrer avant de continuer."
-    exit 1
-fi
+# Call bin/pre-install.sh
+"$TMPDIR/aky_cli/bin/pre-install.sh"
 
 # Clone the repository
 git clone https://github.com/akyoscommunication/akyos-wp-cli.git "$TMPDIR/aky_cli"
@@ -30,8 +17,20 @@ cd "$TMPDIR/aky_cli" || exit
 docker build -t aky-cli -f .docker/Dockerfile --no-cache .
 
 # Create the container
-echo "docker run --rm --network=\"host\" -it -v $(pwd):/cwd aky-cli \"\$@\"" > /usr/local/bin/aky
-chmod +x /usr/local/bin/aky
+if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "win32" ]]; then
+    echo "docker run --rm --network=\"host\" -it -v \"%cd%\":/cwd aky-cli \"%*\"" > "C:\Program Files\aky\aky.bat"
+    setx PATH "%PATH%;C:\Program Files\aky\\" /M
+else
+    echo "docker run --rm --network=\"host\" -it -v $(pwd):/cwd aky-cli \"\$@\"" > /usr/local/bin/aky
+    chmod +x /usr/local/bin/aky
+fi
+
+# Store the configuration
+mkdir -p "$HOME/.aky"
+cp config/config.json "$HOME/.aky/config.json"
+
+# Call bin/configuration.sh
+"$TMPDIR/aky_cli/bin/configuration.sh"
 
 # Clean
 cd "$cwd" || exit

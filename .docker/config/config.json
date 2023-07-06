@@ -1,0 +1,17 @@
+{
+  "APP_ENV": "developpment",
+  "GITLAB_TOKEN": "",
+  "WPMU_DEV_API_KEY": "",
+  "ACF_PRO_KEY": "",
+  "COMPONENT_API_URL": "http://showroom.ac-dev.fr",
+  "PRESETS": {
+    "DB_USER": "",
+    "DB_PASSWORD": "",
+    "DB_HOST": "host.docker.internal",
+    "ADMIN_EMAIL": "",
+    "SITE_URL": ""
+  },
+  "PLUGINS": {
+    "polylang": "%resources%/plugins/polylang.zip"
+  }
+}

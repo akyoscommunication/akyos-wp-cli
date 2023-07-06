@@ -8,7 +8,7 @@ class Config:
     @staticmethod
     def readConfiguration():
         config = {}
-        with open(join(SCRIPT_PATH, 'config', 'config.json')) as _config:
+        with open(CONFIG_PATH) as _config:
             config = json.load(_config)
         return config
 

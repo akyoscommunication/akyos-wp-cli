@@ -19,6 +19,7 @@ WP_CLI_QUIET = 'php -d display_errors=0 wp-cli.phar'
 
 PROJECT_PATH = os.path.abspath(os.getcwd())
 SCRIPT_PATH = os.path.dirname(os.path.realpath(__file__))
+CONFIG_PATH = os.path.join(os.path.expanduser("~"), ".aky", "config.json")
 THEME_PATH = os.path.join(PROJECT_PATH, 'web', 'app', 'themes', THEME_NAME)
 COMPONENTS_PATH = os.path.join(THEME_PATH, 'resources', 'views', 'components')
 ASSETS_PATH = os.path.join(THEME_PATH, 'resources', 'assets')

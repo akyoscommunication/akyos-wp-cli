@@ -4,6 +4,11 @@ cwd=$(pwd)
 
 echo "Installation du CLI Akyos..."
 
+# if dir exist tmp/aky_cli
+if [ -d "$TMPDIR/aky_cli" ]; then
+    rm -rf "$TMPDIR/aky_cli"
+fi
+
 # Clone the repository
 git clone https://github.com/akyoscommunication/akyos-wp-cli.git "$TMPDIR/aky_cli"
 
